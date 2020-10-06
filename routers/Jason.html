@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <style type="text/css">
+            body{
+                background: #FFD1A4;
+                font-family: ubuntu;
+            }
+            #title{
+                background: #FDFFFF;
+                font-size: 40px;
+                letter-spacing: 2px;
+                margin-top: 100px;
+                max-width: 1600px;
+                text-align: center;
+                color:#64A600;
+            }
+
+            #information{
+                background: #FDFFFF;
+                font-size: 40px;
+                letter-spacing: 2px;
+                margin-top: 100px;
+                max-width: 300px;
+                text-align: left;
+                color:#BB5E00	;
+                float: center;
+            }
+
+            #text{
+                
+                font-size: 20px;
+                text-align: left;
+                color:#000000;
+                float: left;
+            }
+
+            #picture{
+                float: left;
+            }            
+
+
+            marquee{
+                font-size: 30px;
+            }
+        </style>    
+        
+    </head>    
+
+    <body>
+        <div id="title">
+            <b> 我的個人頁面 </b> <br>
+        </div>     
+
+
+        <div id="information">
+            <b> 我的個人資料: </b> <br>
+        </div>     
+
+        <div id="picture">
+            <img src="https://i.imgur.com/ynrdGK5.jpg"  width=60% height=60% BORDER=2 >      
+        </div>    
+
+        <div id="text">
+            <b>安裝tensorflow gpu流程<p>
+
+                1.conda create -name env_name python=3.7<p>
+                2.activate env_name<p>
+                3.pip install --ignore-installed --upgrade env_name<p>
+                刪除env: conda env remove --name env_name<p>
+
+
+                pytorch安裝方法:<p>
+                
+                1.[使用pytorch網址安裝]<p>
+                pytorch網址: <a href = "https://download.pytorch.org/whl/torch_stable.html">https://download.pytorch.org/whl/torch_stable.html</a><p>
+                
+                ex. pip install <a href = "https://download.pytorch.org/whl/cu101/torch-1.4.0-cp38-cp38-linux_x86_64.whl">https://download.pytorch.org/whl/cu101/torch-1.4.0-cp38-cp38-linux_x86_64.whl</a><p>
+
+                2. [For pip]<p>
+                install with specified version and -f (自己指定torch、torchvision版本)<p>
+
+                ex. pip install torch==1.6.0 torchvision==0.7.0 -f <a href = "https://download.pytorch.org/whl/cu101/torch_stable.html">https://download.pytorch.org/whl/cu101/torch_stable.html</a><p>
+                    pip install torch===1.4.0 torchvision===0.5.0 -f https://download.pytorch.org/whl/torch_stable.html<p>
+                3.[For conda ]<p>
+                Run conda install with cudatoolkit<p>
+                依照cuda版本安裝匹配的torch、torchvision版本<p>
+
+                ex. conda install pytorch torchvision cudatoolkit=10.1 -c pytorch<p>
+
+                測試torch安裝成功否<p>
+
+                import torch<p>
+                torch.cuda.is_available()<p>
+
+
+                安裝環境到jupyter<p>
+                python -m ipykernel install --user --name env_name --display-name "Python (tensorflow-gpu)"<p>       
+
+
+                COCO API下載    <a href = "https://github.com/philferriere/cocoapi">https://github.com/philferriere/cocoapi</a><p>
+
+                Tensorflow版本<p>
+                最好是tensorflow-gpu=1.14.0 + keras=2.1.0<p>
+
+
+
+                Pillow問題<p>
+                不可直接使用pip install Pillow<p>
+
+                應該是<p>
+                1.pip uninstall PIL<p>
+                2.pip uninstall Pillow<p>
+                3.pip install Pillow<p>
+
+                CUDA與cudnn版本<p>
+                CUDA:10.1.243<p>
+                cudnn:10.1 v7.6.5.32<p>
+
+                Paris streetview dataset      
+                <a href = "https://www.amuzinc.com/Product?kidCode=20191203002">https://www.amuzinc.com/Product?kidCode=20191203002 </a><p>
+
+                scipy版本請安裝1.1.0， 1.3.0已經把imread從scipy.misc移除<p>
+                pip install scipy==1.1.0<p>
+
+                要額外安裝的包:<p>
+                1.pip install scikit-image<p>
+                2.pip install pandas<p>
+                3.pip install tqdm<p>   
+                
+
+                
+            </b> <br>
+        </div>     
+        
+        <marquee  behavior="alternate" scrollamount = "25">⧸⎩⎠⎞͏(・∀・)⎛͏⎝⎭⧹歡迎光臨⧸⎩⎠⎞͏(・∀・)⎛͏⎝⎭⧹</marquee>
+    </body>
+
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <h1>CSLAB物品借出の學生名單</h1>
+    <body>
+        <div class="content">
+            <form id="add-students-form">
+                <input type="text" name="name" placeholder="輸入 Student's name">
+                <input type="text" name="student_ID" placeholder="輸入 Student's ID">
+                <input type="text" name="object" placeholder="輸入 借出的物品">
+                <input type="text" name="object_ID" placeholder="輸入 物品編號">
+                <input type="text" name="day" placeholder="輸入 借出日期">
+                <button> Add a student </button> 
+            </form>
+            <table id="stu-table" cellpadding="10" border="1" width="100%">
+                　<tr>
+                　  <td>姓名</td>
+                　  <td>學號</td>
+                    <td>借出物品</td>
+                    <td>物品編號</td>
+                    <td>借出日期</td>
+                　</tr>
+            </table>
+        </div>
+    </body>
+
+   <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>    
+    <script>
+    // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDEIprswrurze1LR4Exd0sHBoJToTxTVQY",
+            authDomain: "test-e365f.firebaseapp.com",
+            databaseURL: "https://test-e365f.firebaseio.com",
+            projectId: "test-e365f",
+            storageBucket: "test-e365f.appspot.com",
+            messagingSenderId: "977579564284",
+            appId: "1:977579564284:web:bfe0e91ead5b67457d8b79",
+            measurementId: "G-HTZGR6SHWQ"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const db = firebase.firestore();
+    
+    </script>
+    <script src="app.js"></script>
+</html>
